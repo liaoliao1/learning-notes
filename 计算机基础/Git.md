@@ -138,3 +138,50 @@ git commit  -am  "message"  解决冲突后提交所有已更改的文件
 
 ## linux基础命令
 ![](https://ftp.bmp.ovh/imgs/2020/08/f127fd346d59d45e.jpg)
+
+# 2. git基础
+SVN 集中式版本控制系统  有一个单一集中管理的服务器
+
+Git 分布式版本控制系统  每个人的电脑上都是一个完整的版本库
+
+```
+git init 创建本地版本库
+git add 添加到缓存区
+git commit 提交到本地仓库
+git stash 放入暂存区，暂时不想提交的修改
+git checkout -f 撤销丢弃本地修改
+git rm –cached 撤销添加到缓存区的修改
+git reset bb0b350xxx 回滚到hashId的状态
+	--soft HEAD 回到上一次文件改变之后，未commit的状态
+	--hard HEAD 回到上一次文件没改之前的状态
+git tag v1 给本次提交贴标签v1
+git status 查看当前状态
+git log 查看提交记录
+```
+```
+git分支只是一个包含所指对象校验和的文件，创建分支本质上是向一个文件写入41个字节。
+git branch test 创建test分支
+git checkout test 切换到test分支
+git merge test 合并test分支
+git branch -d test 删除test分支
+git branch -d -r <branchname> //删除远程分支，删除后还需推送到服务器
+git push origin:<branchname>  //删除后推送至服务器
+```
+```
+git clone 克隆仓库到本地文件夹
+git remote -v 获取远程仓库信息
+git remote update origin 更新远程仓库变更 拉取所有分支变更
+git fetch <远程主机名><远程分支名>:<本地分支名>
+git pull = git fetch + git merge origin/develop
+git push <远程主机名><本地分支名>:<远程分支名>
+
+git add – git commit – git pull – 解决冲突 – git push
+```
+
+
+
+
+
+
+
+
